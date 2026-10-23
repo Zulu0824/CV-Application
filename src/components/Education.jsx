@@ -1,1 +1,0 @@
-function Education({ cv, setCV }) {}

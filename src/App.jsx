@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./App.css";
+import { InputSection } from "./components/InputSection";
 
 export default function App() {
   return (
-    <div className="app">
-      <section className="input-section"></section>
-      <section className="preview-section"></section>
+    <div>
+      <InputSection />
     </div>
   );
 }
