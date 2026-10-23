@@ -1,4 +1,7 @@
 export function PersonalDetails({ value, changedValue }) {
+  function handleChange(e) {
+    changedValue(e.target.value, e.target.name);
+  }
   return (
     <section className="personal-details">
       <h2>Personal Details</h2>
@@ -8,6 +11,8 @@ export function PersonalDetails({ value, changedValue }) {
           type="text"
           name="fullName"
           id="fullName"
+          value={value.fullName}
+          onChange={handleChange}
           placeholder="John Doe"
         />
       </label>
@@ -17,12 +22,21 @@ export function PersonalDetails({ value, changedValue }) {
           type="email"
           name="email"
           id="email"
+          value={value.email}
+          onChange={handleChange}
           placeholder="john.doe@email.com"
         />
       </label>
       <label>
         Phone
-        <input type="tel" name="phone" id="phone" placeholder="9876543210" />
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          value={value.phone}
+          placeholder="9876543210"
+          onChange={handleChange}
+        />
       </label>
     </section>
   );
